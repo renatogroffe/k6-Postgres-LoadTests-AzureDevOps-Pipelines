@@ -10,8 +10,6 @@ export function teardown() {
 }
 
 export default function () {
-  const firstName = faker.person.firstName();
-  const lastName = faker.person.lastName();
   db.exec(`INSERT INTO "Products" ("Name", "Upc") ` +
     `VALUES('${faker.product.productName()}', ` +
     `'${faker.product.productUpc()}');`);
